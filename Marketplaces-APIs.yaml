@@ -1,0 +1,1123 @@
+openapi: 3.0.0
+info:
+  title: Marketplaces-HUB APIs
+  contact: {}
+  version: '1.0'
+  description: >-
+    Get the current weather, daily forecast for 16 days, and a
+    three-hour-interval forecast for 5 days for your city. Helpful stats,
+    graphics, and this day in history charts are available for your reference.
+    Interactive maps show precipitation, clouds, pressure, wind around your
+    location stations. Data is available in JSON, XML, or HTML format. **Note**:
+    This sample Swagger file covers the `current` endpoint only from the
+    OpenWeatherMap API. <br/><br/> **Note**: All parameters are optional, but
+    you must select at least one parameter. Calling the API by city ID (using
+    the `id` parameter) will provide the most precise location results.
+servers:
+- url: http://example.com/woocommerce
+  variables: {}
+paths:
+  /products:
+    post:
+      tags:
+      - WooCommerce
+      summary: List Products
+      operationId: ListProducts
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListProductsRequest'
+            example:
+              store_url: woocommerce.westore.ai
+              api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+              api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+        required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 127.0.0.1:8000
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Thu, 04 Aug 2022 08:46:47 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: close
+            X-Powered-By:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: PHP/8.1.6
+            Cache-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: no-cache, private
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListProducts'
+      deprecated: false
+      security: []
+  /orders:
+    post:
+      tags:
+      - WooCommerce
+      summary: List Orders
+      operationId: ListOrders
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListOrdersRequest'
+            example:
+              store_url: woocommerce.westore.ai
+              api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+              api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+        required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 127.0.0.1:8000
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Thu, 04 Aug 2022 08:39:55 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: close
+            X-Powered-By:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: PHP/8.1.6
+            Cache-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: no-cache, private
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListOrders'
+              example:
+                data:
+                - id: '52'
+                  name: ''
+                  marketplace: woocommerce
+                  financial_status: ''
+                  fulfillment_status: processing
+                  currency_code: AED
+                  payment_method: cod
+                  total: '71.00'
+                  discount: '0.00'
+                  tax: '0.00'
+                  products:
+                  - marketplace: woocommerce
+                    product_id: '30'
+                    variant_id: '30'
+                    name: Belt
+                    price: '55'
+                    quantity: '1'
+                    sku: ''
+                  - marketplace: woocommerce
+                    product_id: '31'
+                    variant_id: '31'
+                    name: Cap
+                    price: '16'
+                    quantity: '1'
+                    sku: ''
+                  customer:
+                    id: ''
+                    name: John Doe
+                    email: john.doe@example.com
+                    phone: '999999999'
+                  address:
+                    id: null
+                    details: ', '
+                    city: Dubai
+                    country: AE
+                  created_at: 2022-08-03 14:09:37
+                - id: '49'
+                  name: ''
+                  marketplace: woocommerce
+                  financial_status: ''
+                  fulfillment_status: completed
+                  currency_code: AED
+                  payment_method: cod
+                  total: '18.00'
+                  discount: '0.00'
+                  tax: '0.00'
+                  products:
+                  - marketplace: woocommerce
+                    product_id: '40'
+                    variant_id: '40'
+                    name: Vneck Tshirt
+                    price: '18'
+                    quantity: '1'
+                    sku: ''
+                  customer:
+                    id: ''
+                    name: John Doe
+                    email: john.doe@example.com
+                    phone: '999999999'
+                  address:
+                    id: null
+                    details: ', '
+                    city: Dubai
+                    country: AE
+                  created_at: 2022-08-03 12:25:57
+                - id: '48'
+                  name: ''
+                  marketplace: woocommerce
+                  financial_status: ''
+                  fulfillment_status: completed
+                  currency_code: AED
+                  payment_method: cod
+                  total: '45.00'
+                  discount: '0.00'
+                  tax: '0.00'
+                  products:
+                  - marketplace: woocommerce
+                    product_id: '33'
+                    variant_id: '33'
+                    name: Hoodie with Logo
+                    price: '45'
+                    quantity: '1'
+                    sku: ''
+                  customer:
+                    id: ''
+                    name: John Doe
+                    email: john.doe@example.com
+                    phone: '999999999'
+                  address:
+                    id: null
+                    details: ', '
+                    city: Dubai
+                    country: AE
+                  created_at: 2022-08-03 12:13:00
+                - id: '47'
+                  name: ''
+                  marketplace: woocommerce
+                  financial_status: ''
+                  fulfillment_status: cancelled
+                  currency_code: AED
+                  payment_method: cod
+                  total: '18.00'
+                  discount: '0.00'
+                  tax: '0.00'
+                  products:
+                  - marketplace: woocommerce
+                    product_id: '39'
+                    variant_id: '39'
+                    name: Tshirt
+                    price: '18'
+                    quantity: '1'
+                    sku: ''
+                  customer:
+                    id: ''
+                    name: John Doe
+                    email: john.doe@example.com
+                    phone: '999999999'
+                  address:
+                    id: null
+                    details: ', '
+                    city: Dubai
+                    country: AE
+                  created_at: 2022-08-03 11:38:43
+                - id: '46'
+                  name: ''
+                  marketplace: woocommerce
+                  financial_status: ''
+                  fulfillment_status: processing
+                  currency_code: AED
+                  payment_method: cod
+                  total: '18.00'
+                  discount: '0.00'
+                  tax: '0.00'
+                  products:
+                  - marketplace: woocommerce
+                    product_id: '39'
+                    variant_id: '39'
+                    name: Tshirt
+                    price: '18'
+                    quantity: '1'
+                    sku: ''
+                  customer:
+                    id: ''
+                    name: John Doe
+                    email: john.doe@example.com
+                    phone: '999999999'
+                  address:
+                    id: null
+                    details: ', '
+                    city: Dubai
+                    country: AE
+                  created_at: 2022-08-03 11:14:26
+                - id: '45'
+                  name: ''
+                  marketplace: woocommerce
+                  financial_status: ''
+                  fulfillment_status: cancelled
+                  currency_code: AED
+                  payment_method: cod
+                  total: '61.00'
+                  discount: '0.00'
+                  tax: '0.00'
+                  products:
+                  - marketplace: woocommerce
+                    product_id: '31'
+                    variant_id: '31'
+                    name: Cap
+                    price: '16'
+                    quantity: '1'
+                    sku: ''
+                  - marketplace: woocommerce
+                    product_id: '33'
+                    variant_id: '33'
+                    name: Hoodie with Logo
+                    price: '45'
+                    quantity: '1'
+                    sku: ''
+                  customer:
+                    id: ''
+                    name: John Doe
+                    email: john.doe@example.com
+                    phone: '999999999'
+                  address:
+                    id: null
+                    details: ', '
+                    city: Dubai
+                    country: AE
+                  created_at: 2022-08-01 09:42:43
+      deprecated: false
+  /orders/47/cancel:
+    put:
+      tags:
+      - WooCommerce
+      summary: Cancel Order
+      operationId: CancelOrder
+      parameters:
+      - name: X-Shopify-Hmac-Sha256
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`AweH5Jo4bM=`'
+      - name: X-Shopify-Shop-Domain
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`{shop}.myshopify.com`'
+      - name: X-Shopify-API-Version
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`2022-04`'
+      - name: X-Shopify-Webhook-Id
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`b54557e4-bdd9-4b37-8a5f-bf7d70bcd043`'
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelOrderRequest'
+            example:
+              store_url: woocommerce.westore.ai
+              api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+              api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+        required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 127.0.0.1:8000
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Thu, 04 Aug 2022 08:52:15 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: close
+            X-Powered-By:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: PHP/8.1.6
+            Cache-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: no-cache, private
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CancelOrder'
+              example:
+                success: 1
+      deprecated: false
+  /orders/52/status:
+    put:
+      tags:
+      - WooCommerce
+      summary: Update Order Status
+      operationId: UpdateOrderStatus
+      parameters:
+      - name: X-Shopify-Hmac-Sha256
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`AweH5Jo4bM=`'
+      - name: X-Shopify-Shop-Domain
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`{shop}.myshopify.com`'
+      - name: X-Shopify-API-Version
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`2022-04`'
+      - name: X-Shopify-Webhook-Id
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: '`b54557e4-bdd9-4b37-8a5f-bf7d70bcd043`'
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateOrderStatusRequest'
+            example:
+              store_url: woocommerce.westore.ai
+              api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+              api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+              status: '3'
+        required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: 127.0.0.1:8000
+            Date:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: Thu, 04 Aug 2022 08:56:13 GMT
+            Connection:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: close
+            X-Powered-By:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: PHP/8.1.6
+            Cache-Control:
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                  example: no-cache, private
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateOrderStatus'
+              example:
+                success: 1
+      deprecated: false
+components:
+  schemas:
+    ListProductsRequest:
+      title: ListProductsRequest
+      required:
+      - store_url
+      - api_key
+      - api_secret
+      type: object
+      properties:
+        store_url:
+          type: string
+        api_key:
+          type: string
+        api_secret:
+          type: string
+      example:
+        store_url: woocommerce.westore.ai
+        api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+        api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+    ListProducts:
+      title: ListProducts
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Datum'
+          description: ''
+    Datum:
+      title: Datum
+      required:
+      - id
+      - name
+      - marketplace
+      - description
+      - vendor
+      - published_at
+      - product_type
+      - status
+      - tags
+      - images
+      - variants
+      - options
+      - created_at
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        marketplace:
+          type: string
+        description:
+          type: string
+        vendor:
+          type: string
+        published_at:
+          type: string
+        product_type:
+          type: string
+        status:
+          type: string
+        tags:
+          type: string
+        images:
+          type: array
+          items:
+            oneOf:
+            - $ref: '#/components/schemas/Image'
+            - $ref: '#/components/schemas/Image1'
+          description: ''
+        variants:
+          type: array
+          items:
+            type: string
+          description: ''
+        options:
+          type: array
+          items:
+            type: string
+          description: ''
+        created_at:
+          type: string
+      example:
+        id: '55'
+        name: Test T-Shirt X
+        marketplace: woocommerce
+        description: ''
+        vendor: ''
+        published_at: 2022-08-04 08:13:52
+        product_type: variable
+        status: publish
+        tags: ''
+        images: []
+        variants: []
+        options: []
+        created_at: 2022-08-04 08:13:52
+    Image:
+      title: Image
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        date_created:
+          type: string
+        date_created_gmt:
+          type: string
+        date_modified:
+          type: string
+        date_modified_gmt:
+          type: string
+        src:
+          type: string
+        name:
+          type: string
+        alt:
+          type: string
+    Image1:
+      title: Image1
+      required:
+      - id
+      - date_created
+      - date_created_gmt
+      - date_modified
+      - date_modified_gmt
+      - src
+      - name
+      - alt
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        date_created:
+          type: string
+        date_created_gmt:
+          type: string
+        date_modified:
+          type: string
+        date_modified_gmt:
+          type: string
+        src:
+          type: string
+        name:
+          type: string
+        alt:
+          type: string
+      example:
+        id: 22
+        date_created: 2022-07-28T08:45:11
+        date_created_gmt: 2022-07-28T08:45:11
+        date_modified: 2022-07-28T08:45:11
+        date_modified_gmt: 2022-07-28T08:45:11
+        src: https://woocommerce.westore.ai/wp-content/uploads/2022/07/vneck-tee.jpg
+        name: Vneck Tshirt
+        alt: ''
+    ListOrdersRequest:
+      title: ListOrdersRequest
+      required:
+      - store_url
+      - api_key
+      - api_secret
+      type: object
+      properties:
+        store_url:
+          type: string
+        api_key:
+          type: string
+        api_secret:
+          type: string
+      example:
+        store_url: woocommerce.westore.ai
+        api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+        api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+    ListOrders:
+      title: ListOrders
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Datum1'
+          description: ''
+      example:
+        data:
+        - id: '52'
+          name: ''
+          marketplace: woocommerce
+          financial_status: ''
+          fulfillment_status: processing
+          currency_code: AED
+          payment_method: cod
+          total: '71.00'
+          discount: '0.00'
+          tax: '0.00'
+          products:
+          - marketplace: woocommerce
+            product_id: '30'
+            variant_id: '30'
+            name: Belt
+            price: '55'
+            quantity: '1'
+            sku: ''
+          - marketplace: woocommerce
+            product_id: '31'
+            variant_id: '31'
+            name: Cap
+            price: '16'
+            quantity: '1'
+            sku: ''
+          customer:
+            id: ''
+            name: John Doe
+            email: john.doe@example.com
+            phone: '999999999'
+          address:
+            id: null
+            details: ', '
+            city: Dubai
+            country: AE
+          created_at: 2022-08-03 14:09:37
+        - id: '49'
+          name: ''
+          marketplace: woocommerce
+          financial_status: ''
+          fulfillment_status: completed
+          currency_code: AED
+          payment_method: cod
+          total: '18.00'
+          discount: '0.00'
+          tax: '0.00'
+          products:
+          - marketplace: woocommerce
+            product_id: '40'
+            variant_id: '40'
+            name: Vneck Tshirt
+            price: '18'
+            quantity: '1'
+            sku: ''
+          customer:
+            id: ''
+            name: John Doe
+            email: john.doe@example.com
+            phone: '999999999'
+          address:
+            id: null
+            details: ', '
+            city: Dubai
+            country: AE
+          created_at: 2022-08-03 12:25:57
+        - id: '48'
+          name: ''
+          marketplace: woocommerce
+          financial_status: ''
+          fulfillment_status: completed
+          currency_code: AED
+          payment_method: cod
+          total: '45.00'
+          discount: '0.00'
+          tax: '0.00'
+          products:
+          - marketplace: woocommerce
+            product_id: '33'
+            variant_id: '33'
+            name: Hoodie with Logo
+            price: '45'
+            quantity: '1'
+            sku: ''
+          customer:
+            id: ''
+            name: John Doe
+            email: john.doe@example.com
+            phone: '999999999'
+          address:
+            id: null
+            details: ', '
+            city: Dubai
+            country: AE
+          created_at: 2022-08-03 12:13:00
+        - id: '47'
+          name: ''
+          marketplace: woocommerce
+          financial_status: ''
+          fulfillment_status: cancelled
+          currency_code: AED
+          payment_method: cod
+          total: '18.00'
+          discount: '0.00'
+          tax: '0.00'
+          products:
+          - marketplace: woocommerce
+            product_id: '39'
+            variant_id: '39'
+            name: Tshirt
+            price: '18'
+            quantity: '1'
+            sku: ''
+          customer:
+            id: ''
+            name: John Doe
+            email: john.doe@example.com
+            phone: '999999999'
+          address:
+            id: null
+            details: ', '
+            city: Dubai
+            country: AE
+          created_at: 2022-08-03 11:38:43
+        - id: '46'
+          name: ''
+          marketplace: woocommerce
+          financial_status: ''
+          fulfillment_status: processing
+          currency_code: AED
+          payment_method: cod
+          total: '18.00'
+          discount: '0.00'
+          tax: '0.00'
+          products:
+          - marketplace: woocommerce
+            product_id: '39'
+            variant_id: '39'
+            name: Tshirt
+            price: '18'
+            quantity: '1'
+            sku: ''
+          customer:
+            id: ''
+            name: John Doe
+            email: john.doe@example.com
+            phone: '999999999'
+          address:
+            id: null
+            details: ', '
+            city: Dubai
+            country: AE
+          created_at: 2022-08-03 11:14:26
+        - id: '45'
+          name: ''
+          marketplace: woocommerce
+          financial_status: ''
+          fulfillment_status: cancelled
+          currency_code: AED
+          payment_method: cod
+          total: '61.00'
+          discount: '0.00'
+          tax: '0.00'
+          products:
+          - marketplace: woocommerce
+            product_id: '31'
+            variant_id: '31'
+            name: Cap
+            price: '16'
+            quantity: '1'
+            sku: ''
+          - marketplace: woocommerce
+            product_id: '33'
+            variant_id: '33'
+            name: Hoodie with Logo
+            price: '45'
+            quantity: '1'
+            sku: ''
+          customer:
+            id: ''
+            name: John Doe
+            email: john.doe@example.com
+            phone: '999999999'
+          address:
+            id: null
+            details: ', '
+            city: Dubai
+            country: AE
+          created_at: 2022-08-01 09:42:43
+    Datum1:
+      title: Datum1
+      required:
+      - id
+      - name
+      - marketplace
+      - financial_status
+      - fulfillment_status
+      - currency_code
+      - payment_method
+      - total
+      - discount
+      - tax
+      - products
+      - customer
+      - address
+      - created_at
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        marketplace:
+          type: string
+        financial_status:
+          type: string
+        fulfillment_status:
+          type: string
+        currency_code:
+          type: string
+        payment_method:
+          type: string
+        total:
+          type: string
+        discount:
+          type: string
+        tax:
+          type: string
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+          description: ''
+        customer:
+          $ref: '#/components/schemas/Customer'
+        address:
+          $ref: '#/components/schemas/Address'
+        created_at:
+          type: string
+      example:
+        id: '52'
+        name: ''
+        marketplace: woocommerce
+        financial_status: ''
+        fulfillment_status: processing
+        currency_code: AED
+        payment_method: cod
+        total: '71.00'
+        discount: '0.00'
+        tax: '0.00'
+        products:
+        - marketplace: woocommerce
+          product_id: '30'
+          variant_id: '30'
+          name: Belt
+          price: '55'
+          quantity: '1'
+          sku: ''
+        - marketplace: woocommerce
+          product_id: '31'
+          variant_id: '31'
+          name: Cap
+          price: '16'
+          quantity: '1'
+          sku: ''
+        customer:
+          id: ''
+          name: John Doe
+          email: john.doe@example.com
+          phone: '999999999'
+        address:
+          id: null
+          details: ', '
+          city: Dubai
+          country: AE
+        created_at: 2022-08-03 14:09:37
+    Product:
+      title: Product
+      required:
+      - marketplace
+      - product_id
+      - variant_id
+      - name
+      - price
+      - quantity
+      - sku
+      type: object
+      properties:
+        marketplace:
+          type: string
+        product_id:
+          type: string
+        variant_id:
+          type: string
+        name:
+          type: string
+        price:
+          type: string
+        quantity:
+          type: string
+        sku:
+          type: string
+      example:
+        marketplace: woocommerce
+        product_id: '30'
+        variant_id: '30'
+        name: Belt
+        price: '55'
+        quantity: '1'
+        sku: ''
+    Customer:
+      title: Customer
+      required:
+      - id
+      - name
+      - email
+      - phone
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+      example:
+        id: ''
+        name: John Doe
+        email: john.doe@example.com
+        phone: '999999999'
+    Address:
+      title: Address
+      required:
+      - id
+      - details
+      - city
+      - country
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        details:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+      example:
+        id: null
+        details: ', '
+        city: Dubai
+        country: AE
+    CancelOrderRequest:
+      title: CancelOrderRequest
+      required:
+      - store_url
+      - api_key
+      - api_secret
+      type: object
+      properties:
+        store_url:
+          type: string
+        api_key:
+          type: string
+        api_secret:
+          type: string
+      example:
+        store_url: woocommerce.westore.ai
+        api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+        api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+    CancelOrder:
+      title: CancelOrder
+      required:
+      - success
+      type: object
+      properties:
+        success:
+          type: integer
+          format: int32
+      example:
+        success: 1
+    UpdateOrderStatusRequest:
+      title: UpdateOrderStatusRequest
+      required:
+      - store_url
+      - api_key
+      - api_secret
+      - status
+      type: object
+      properties:
+        store_url:
+          type: string
+        api_key:
+          type: string
+        api_secret:
+          type: string
+        status:
+          type: string
+      example:
+        store_url: woocommerce.westore.ai
+        api_key: ck_a14ef63ca7fe1bd579438f958a921d326a4adcb9
+        api_secret: cs_47440473d30c2ab9cb674196a7cd014590b4c4dd
+        status: '3'
+    UpdateOrderStatus:
+      title: UpdateOrderStatus
+      required:
+      - success
+      type: object
+      properties:
+        success:
+          type: integer
+          format: int32
+      example:
+        success: 1
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      name: X-Shopify-Access-Token
+      in: header
+security:
+- apiKey: []
+tags:
+- name: WooCommerce
